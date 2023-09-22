@@ -14,13 +14,19 @@
   btn.addEventListener('click', () => {
        const result = document.querySelector('#result');
        const numbersCheckbox = document.querySelector('#numbers-checkbox');
+       const symbolsCheckbox = document.querySelector('#symbols-checkbox');
        const numbers = '0123456789';
+       const symbols = '!#&@?%()';
        const letters = 'abcdefghijklmnopqrstuvwxyz';
        let password = '';
        let seed = letters + letters.toUpperCase();
 
       if (numbersCheckbox.checked) {
           seed += numbers;
+      }
+
+      if (symbolsCheckbox.checked) {
+        seed += symbols;
       }
 
 
