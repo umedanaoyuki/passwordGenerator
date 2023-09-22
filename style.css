@@ -2,5 +2,8 @@
 
 main {
   width: 380px;
-  margin: 0 auto;
+  margin: 24px auto 0;
+  box-shadow: 0 0 8px #999;
+  border-radius: 8px;
+  padding: 16px;
 }
