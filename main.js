@@ -14,7 +14,14 @@
   btn.addEventListener('click', () => {
        const result = document.querySelector('#result');
        const letters = 'abcdefghijklmnopqrstuvwxyz';
-       result.textContent = letters[Math.floor(Math.random() * 26)];
+       let password = '';
+
+       for (let i = 0; i < 8; i++ ){
+        password += letters[Math.floor(Math.random() * 26)];
+       }
+
+       console.log(password);
+       result.textContent = password;
       // result.textContent = letters[25];
   });
 
