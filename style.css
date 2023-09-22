@@ -17,3 +17,14 @@ p {
   text-align: center;
   padding: 12px 0;
 }
+
+button {
+  all: unset;
+  width: 100%;
+  background: #08C;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  margin-top: 16px;
+}
