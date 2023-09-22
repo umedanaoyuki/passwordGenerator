@@ -13,12 +13,19 @@
   
   btn.addEventListener('click', () => {
        const result = document.querySelector('#result');
+       const numbersCheckbox = document.querySelector('#numbers-checkbox');
+       const numbers = '0123456789';
        const letters = 'abcdefghijklmnopqrstuvwxyz';
        let password = '';
-       const seed = letters + letters.toUpperCase();
+       let seed = letters + letters.toUpperCase();
+
+      if (numbersCheckbox.checked) {
+          seed += numbers;
+      }
+
 
        for (let i = 0; i < slider.value; i++ ){
-        password += seed[Math.floor(Math.random() * 52)];
+        password += seed[Math.floor(Math.random() * seed.length)];
        }
 
        console.log(password);
