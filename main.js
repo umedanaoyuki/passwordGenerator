@@ -1,18 +1,8 @@
 'use strict'
 {
 
-  const slider = document.getElementById('slider');
-
-  slider.addEventListener('input', () => {
-      const passwordLength = document.getElementById('password-length');
-      passwordLength.textContent = slider.value;
-  });
-
-
-  const btn = document.getElementById('btn');
-  
-  btn.addEventListener('click', () => {
-       const result = document.querySelector('#result');
+  const showPassword = () => {
+    const result = document.querySelector('#result');
        const numbersCheckbox = document.querySelector('#numbers-checkbox');
        const symbolsCheckbox = document.querySelector('#symbols-checkbox');
        const numbers = '0123456789';
@@ -37,7 +27,22 @@
        console.log(password);
        result.textContent = password;
       // result.textContent = letters[25];
+  };
+
+  const slider = document.getElementById('slider');
+
+  slider.addEventListener('input', () => {
+      const passwordLength = document.getElementById('password-length');
+      passwordLength.textContent = slider.value;
   });
 
+
+  const btn = document.getElementById('btn');
+  
+  btn.addEventListener('click', () => {
+       showPassword();
+  });
+
+  showPassword();
 
 }
