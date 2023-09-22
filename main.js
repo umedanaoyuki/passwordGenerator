@@ -9,4 +9,12 @@
   });
 
 
+  const btn = document.getElementById('btn');
+  
+  btn.addEventListener('click', () => {
+       const result = document.querySelector('#result');
+       result.textContent = 'clicked';
+  });
+
+
 }
